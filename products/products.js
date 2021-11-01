@@ -398,6 +398,6 @@ function products()
   return data;
 }
 
-// module.export = {srng1};
+// module.export = {products};
 
 export default products;
