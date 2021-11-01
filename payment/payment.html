@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myglammpayment</title>
+
+    <script src="https://kit.fontawesome.com/a3343fb8ba.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+      
+        #cont2{
+             background-color: #B3E5FC; 
+            display: flex;
+            height: 600px;
+        }
+         #cont2>div:nth-child(1){
+
+            margin-left:17%;
+            margin-top: 6%;
+        } 
+        #cont2>div:nth-child(2){
+            margin-left: 15%;
+            margin-top: 5%;
+        }
+        form>input{
+            width: 300px;
+            height: 20px;
+            margin-top: 10px;
+        }
+        #dark{
+            font-size: 20px;
+        }
+        #sub{
+            width: 150px;
+            margin-left: 50%;
+        }
+        #pay{
+            margin-left:15%;
+                width: 255px; 
+                
+                  }
+        body{
+            background-color: hotpink;
+        }
+        h3{
+            background-color:whitesmoke         
+        }
+        .fas{
+            font-size: 25px;
+            padding: 2px;
+        }
+        .fab{
+            font-size: 25px;
+            padding: 2px;
+        }
+    </style>
+<body>
+    <div id="cont2">
+        <div>
+            <h2>PAYMENT METHOD</h2>
+            <!-- <select style="width: 200px; height: 50px; background-color: #4FC3F7; color: white; font-size: 18px; font-family:Verdana, Geneva, Tahoma, sans-serif">
+                <option>Credit Card or Debit card</option>
+                <option>Net Banking</option>
+                <option>Google Pay / PhonePe / UPI</option>
+                <option>Wallet</option>
+                <option>Cash On Delivery</option>
+            </select> -->
+           <div id="pay">
+            <h3><i class="fas fa-credit-card"></i>Credit or Debit Card</h3>
+            <h3><i class="fab fa-internet-explorer"></i>Net Banking</h3>
+            <h3><i class="fab fa-cc-amazon-pay"></i>Google Pay/Phone Pay/UPI</h3>
+            <h3><i class="fas fa-wallet"></i>Wallets</h3>
+            <h3><i class="fas fa-money-bill-alt"></i>Cash On Delivery</h3>
+            </div>
+        </div>
+        `<div>
+
+            <h1>
+                Please Enter details
+            </h1>
+
+            <form onsubmit="check(event)" id="checkdet">
+
+                <label id="dark">Cardholder Name</label>&nbsp
+                <input type="text" id="name" placeholder="Cardholders Name">
+                <br/>
+                <label id="dark">Bank Name</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="text" id="bankname" placeholder="Bank Name">
+                <br/>
+                <label id="dark">Mobile Number</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="number" id="mobileno" placeholder="Mobile No.">
+                <br/>
+                <label id="dark">Card Number</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="number" id="accountno" placeholder="xxxx-xxxx-xxxx-xxxx">
+                <br/>
+                <label id="dark">Enter Cvv</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="password" id="password" placeholder="Enter CVV">
+                <br/>
+                
+                 <input id="sub" type="SUBMIT" style="height: 25px;"> 
+            
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+
+     let slide = document.getElementById('cont2')
+    function check(e){
+        e.preventDefault();
+        let name = document.getElementById('name').value;
+        let bankname = document.getElementById('bankname').value;
+        let mobileno = document.getElementById('mobileno').value;
+        let accountno = document.getElementById('accountno').value;
+        let password = document.getElementById('password').value;
+
+        if(name == "" || bankname == "" || mobileno == "" || accountno == "" || password == ""){
+            alert("Fill all the deatails")
+        } else {
+            alert("Thank you for Payment")
+            
+            function start(){
+                inter = setInterval(function(){
+                slide.innerHTML = null;
+                 let img = document.createElement('img')
+                img.src = "https://urbanutilities.co.za/wp-content/uploads/2019/08/Payment-success.png"
+                img.style.width = "1100px"
+                img.style.marginLeft = "200px"
+                img.style.height = "450px"
+                slide.append(img);
+             }, 3000)
+            }
+            start();
+        }
+    }
+</script>

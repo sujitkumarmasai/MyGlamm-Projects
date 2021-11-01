@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myglamm adress</title>
+</head>
+<style>
+    body{
+        background-color: rgb(235, 155, 155);
+    }
+
+    #all{
+        display: grid;
+        grid-template-columns: 20% 20% 20% ;
+        grid-gap: 10%;
+       margin-left: 25%;
+        
+    }
+    input{
+        width: 200px;
+        height: 30px;
+        margin: 10px;
+    }
+    #Detail{
+        margin: 7%;
+    
+    }
+    #ship{
+        margin-left: 50%;
+    }
+    #home{
+        margin-left:10px;
+        width:210px;
+    }
+button{
+    margin-left:70%;
+    width: 100px;
+}
+#color{
+    background-color: brown;
+    width: 700px;
+    height: 250px;
+}
+</style>
+<body>
+    <div id="Detail">
+        
+    <div id="ship">
+        <h2>Shipping Address</h2>
+    </div>
+
+    <div id="all">
+        <div id="color">
+        <input type="text" id="name" placeholder="Name" />
+        <input type="number" id="mobilenumber" placeholder="Mobile Number" />
+        <input type="text" id="email" placeholder="Email Address" />
+        <select id="home">
+            <option>Home</option>
+            <option>Office</option>
+            <option>Other</option>
+        </select>
+        <input type="text" id="detail" placeholder="Flat no./House no./apt no"/>
+        <input type="text" id="streetd" placeholder="Street Name"/>
+        <input type="text" id="nhood" placeholder="neighbourhood"/>
+        <input type="text" id="pincode" placeholder="PinCode"/>
+        <input type="text" id="city" placeholder="City"/>
+        <input type="text" id="state" placeholder="State"/>
+         <input type="text" id="landmark" placeholder="Landmark"/>
+         </div>
+    </div>
+    </div>
+    <button onclick="conti()">Continue</button>
+</body>
+</html>
+<script>
+    function conti(){
+    let name=document.getElementById("name").value;
+    let mobilenumber=document.getElementById("mobilenumber").value;
+    let detail=document.getElementById("detail").value;
+    let streetd=document.getElementById("streetd").value;
+    let nhood=document.getElementById("nhood").value;
+    let pincode=document.getElementById("pincode").value;
+    let city=document.getElementById("city").value;
+    let state=document.getElementById("state").value;
+    let landmark=document.getElementById("landmark").value;
+
+    if(name==""||mobilenumber==""||detail==""||streetd==""||nhood==""||pincode==""||city==""||state==""||landmark==""){
+        alert("fill all details");
+    }
+    else if(mobilenumber.length<10){
+        alert("invalid mobile number");
+    }
+    else{
+        alert("sucessfull added adress");
+    }
+
+    }
+
+</script>
