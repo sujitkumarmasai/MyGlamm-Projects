@@ -70,6 +70,25 @@ var pdata = document.getElementById("pdata");
         price.innerHTML = i.price;
 
         div.append(img,title,subtitle,price);
+
+        div.onclick = function()
+                {
+                    if(localStorage.getItem("pdetails")===null)
+                    {
+                        localStorage.setItem("pdetails",JSON.stringify([]));
+                    }
+                    
+                    let movieuser =JSON.parse(localStorage.getItem("pdetails"));
+                    
+                    movieuser.pop()
+                    movieuser.push(i);
+
+                    localStorage.setItem("pdetails",JSON.stringify (movieuser));
+                    
+                    window.location.href = "productdetails.html";
+
+                }
+
         pdata.append(div);
         
     });
