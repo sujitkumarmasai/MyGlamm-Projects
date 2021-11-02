@@ -90,3 +90,43 @@ nav {
   grid-template-columns: 31% 31%;
   gap: 38%;
 }
+#product-parent {
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  gap: 4%;
+}
+.card {
+  height: 600px;
+  border: 1px solid rgb(226, 226, 226);
+  background-color: white;
+  word-wrap: none;
+}
+.card:hover {
+  box-shadow: 2px 2px 4px 4px rgb(214, 213, 213);
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  margin-bottom: 20px;
+}
+.card h2 {
+  margin: 0px 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.card p {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 30px;
+}
+#price {
+  margin-top: 30px;
+}
+iframe {
+  width: 80%;
+  height: 700px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
