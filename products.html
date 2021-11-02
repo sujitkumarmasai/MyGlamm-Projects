@@ -159,8 +159,9 @@ var pdata = document.getElementById("pdata");
 
     data.forEach( i => 
     {
-        pdata.innerHTML = null;
         
+        
+        console.log(i);
         let div = document.createElement("div");
     
         let img = document.createElement("img");
@@ -179,7 +180,6 @@ var pdata = document.getElementById("pdata");
     });
 
     var makeup = document.getElementById("makeup");
-
     makeup.onclick = function()
     {
         pdata.innerHTML = null;
@@ -203,11 +203,35 @@ var pdata = document.getElementById("pdata");
                 price.innerHTML = i.price;
 
                 div.append(img,title,subtitle,price);
+
+                div.onclick = function()
+                {
+                    if(localStorage.getItem("pdetails")===null)
+                    {
+                        localStorage.setItem("pdetails",JSON.stringify([]));
+                    }
+                    
+                    let movieuser =JSON.parse(localStorage.getItem("pdetails"));
+                    
+                    movieuser.pop()
+                    movieuser.push(i);
+
+                    localStorage.setItem("pdetails",JSON.stringify (movieuser));
+                    
+                    window.location.href = "productdetails.html";
+
+                }
+
                 pdata.append(div);
                 
             }
         });
-        
+    }
+
+    var collection = document.getElementById("collection");
+    collection.onclick = function()
+    {
+        window.location.href = "products.html";
     }
 
 </script>
