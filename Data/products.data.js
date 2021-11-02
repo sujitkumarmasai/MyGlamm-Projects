@@ -423,4 +423,5 @@ var data = [
   },
 ];
 
-export default products;
+
+export default data;
