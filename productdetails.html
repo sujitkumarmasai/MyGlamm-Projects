@@ -111,7 +111,7 @@
                 <p id="rating">Rating</p>
                 <p id="price">Price</p>
                 <p>(MRP incl. of all taxes)</p>
-                <button onclick="" id="pbagbutton"><h3>Add TO Bag</h3></button>
+                <button id="pbagbutton"><h3>Add TO Bag</h3></button>
                 <p id="q01">You will receive cashback worth as myglamm POINTS on this purchase</p>
             </div>
         </div>
@@ -169,7 +169,22 @@ subtitle.innerHTML = dict.subtitle;
 rating.innerHTML = "Rating : "+dict.rating;
 price.innerHTML = "₹ "+dict.price;
 
+let pbagbutton = document.getElementById("pbagbutton");
+pbagbutton.onclick = function()
+{
+    if(localStorage.getItem("myglammCart")===null)
+    {
+        localStorage.setItem("myglammCart",JSON.stringify([]));
+    }
+    let myglammCart =JSON.parse(localStorage.getItem("myglammCart"));
+                    
+    myglammCart.push(dict);
 
+    localStorage.setItem("myglammCart",JSON.stringify (myglammCart));
+                    
+    window.location.href = "productdetails.html";
+
+}
 
 
 

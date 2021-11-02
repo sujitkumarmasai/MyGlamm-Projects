@@ -78,12 +78,12 @@ var pdata = document.getElementById("pdata");
                         localStorage.setItem("pdetails",JSON.stringify([]));
                     }
                     
-                    let movieuser =JSON.parse(localStorage.getItem("pdetails"));
+                    let pdetails = JSON.parse(localStorage.getItem("pdetails"));
                     
-                    movieuser.pop()
-                    movieuser.push(i);
+                    pdetails.pop()
+                    pdetails.push(i);
 
-                    localStorage.setItem("pdetails",JSON.stringify (movieuser));
+                    localStorage.setItem("pdetails",JSON.stringify (pdetails));
                     
                     window.location.href = "productdetails.html";
 
@@ -125,12 +125,12 @@ var pdata = document.getElementById("pdata");
                         localStorage.setItem("pdetails",JSON.stringify([]));
                     }
                     
-                    let movieuser =JSON.parse(localStorage.getItem("pdetails"));
+                    let pdetails =JSON.parse(localStorage.getItem("pdetails"));
                     
-                    movieuser.pop()
-                    movieuser.push(i);
+                    pdetails.pop()
+                    pdetails.push(i);
 
-                    localStorage.setItem("pdetails",JSON.stringify (movieuser));
+                    localStorage.setItem("pdetails",JSON.stringify (pdetails));
                     
                     window.location.href = "productdetails.html";
 
