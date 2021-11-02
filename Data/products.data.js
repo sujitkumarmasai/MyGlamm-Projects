@@ -423,4 +423,8 @@ var data = [
   },
 ];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> acb6ceaa0a2d4d6833817baaf99d03703b44acf0
 export default data;
