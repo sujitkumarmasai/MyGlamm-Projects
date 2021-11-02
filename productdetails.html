@@ -5,8 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>productdetails</title>
+
+    <link rel="stylesheet" href="./productnav/productnav.css">
+
 </head>
 <body>
-    <h1>Srng</h1>
+    <div id="container"></div>
+    <div id="data">
+        
+    </div>
+
 </body>
 </html>
+
+
+<script type="module">
+
+import nav from "./productnav/productnav.js";
+
+var container = document.getElementById("container");
+container.innerHTML = nav() ;
+
+
+</script>
