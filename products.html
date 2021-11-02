@@ -11,12 +11,14 @@
 {
     background-color: rgb(255, 255, 255);
     width: 90%;
-    height: 25%;
+    height: 20%;
     margin-left: 5%;
-    margin-top: -0.5%;
+    margin-top: -0.7%;
     position: fixed;
+    border-bottom: 3px solid rgb(152, 143, 143);
 }
-#Main,#Main1{
+#Main,#Main1
+{
     display: flex;
 }
 #img1
@@ -76,7 +78,6 @@
             width: 90%;
             padding-top: 13%;
             margin-left: 7%;
-            border: 1px solid black;
         }
         #pdata > div
         {
@@ -158,6 +159,8 @@ var pdata = document.getElementById("pdata");
 
     data.forEach( i => 
     {
+        pdata.innerHTML = null;
+        
         let div = document.createElement("div");
     
         let img = document.createElement("img");
@@ -175,9 +178,36 @@ var pdata = document.getElementById("pdata");
         
     });
 
+    var makeup = document.getElementById("makeup");
 
+    makeup.onclick = function()
+    {
+        pdata.innerHTML = null;
 
+        data.forEach(i =>
+        {
+            if(i.category == "makeup")
+            {
+                console.log(i);
 
+                let div = document.createElement("div");
+        
+                let img = document.createElement("img");
+                let title = document.createElement("p");
+                let subtitle = document.createElement("p");
+                let price = document.createElement("p");
+                
+                img.src = i.displayimg;
+                title.innerText = i.title;
+                subtitle.innerText = i.subtitle;
+                price.innerHTML = i.price;
 
+                div.append(img,title,subtitle,price);
+                pdata.append(div);
+                
+            }
+        });
+        
+    }
 
 </script>
