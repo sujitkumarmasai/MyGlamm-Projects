@@ -5,72 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product details</title>
-    <style>
-       
-#container
-{
-    background-color: rgb(255, 255, 255);
-    width: 90%;
-    height: 20%;
-    margin-left: 5%;
-    margin-top: -0.7%;
-    position: fixed;
-    border-bottom: 3px solid rgb(152, 143, 143);
-}
-#Main,#Main1
-{
-    display: flex;
-}
-#img1
-{
-    height: 45%;
-    width: 70%;
-    margin-left: 33%;
-    margin-top: 50px;
-}
-#img2
-{
-    height: 30px;
-    width: 30px;
-    margin-top: 50px;
-    margin-left: 60px;
-}
-#img3
-{
-    height: 30px;
-    width: 30px;
-    margin-top: 50px;
-    margin-left: 40px;
-}
-#txt1
-{
-   width: 400px;
-   height: 40px;
-   background-color: rgb(233, 220, 220);
-   border-radius: 5px;
-   margin-left: 50px;
-    margin-top: 50px;
-}
-.btn1
-{
-    width: 130px;
-    border: 1px solid black;
-    border-radius: 19px;
-    background-color: white;
-    height: 30px;
-    margin-left: 200px;
-    margin-top: 50px;
-    height: 40px;
-}
-#home
-{
-    margin-left: 85px;
-}
-#makeup,#haircare,#skincare,#sant,#collection,#glam,#rewards,#offers
-{
-    margin-left: 50px;
-}
 
+    <link rel="stylesheet" href="./productnav/productnav.css">
+    <style>
         #pdata
         {
             display: grid;
@@ -97,53 +34,6 @@
 <body>
     
     <div id="container">
-        <div id="Main">
-        <div class="d1">
-            <img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" id="img1">
-        </div>
-        <div class="d2">
-            <input id="txt1" type="text" placeholder="Find Lipstick,Eyeliner,Makeup Tutorial etc.">
-        </div>
-        <div class="d3">
-            <button class="btn1">Refer & Earn</button>
-        </div>
-        <div class="d4">
-            <img src="https://cdn-icons-png.flaticon.com/512/126/126515.png" id="img2">
-        </div>
-        <div class="d5">
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" id="img3">
-        </div>
-    </div>
-    <div id="Main1">
-        <div class="d1">
-            <h5 id="home">HOME</h5>
-        </div>
-        <div class="d6">
-            <h5
-            id="collection">COLLECTION</h5>
-        </div>
-        <div class="d2">
-            <h5 id="makeup">MAKEUP</h5>
-        </div>
-        <div class="d3">
-            <h5 id="haircare">HAIR CARE</h5>
-        </div>
-        <div class="d4">
-            <h5 id="skincare">SKIN CARE</h5>
-        </div>
-        <div class="d5">
-            <h5 id="sant">SANITIZING CARE</h5>
-        </div>
-        <div class="d7">
-            <h5 id="rewards">REWARDS</h5>
-        </div>
-        <div class="d8">
-            <h5 id="glam">MYGLAMM STUDIO</h5>
-        </div>
-        <div class="d9">
-            <h5 id="offers">OFFERS</h5>
-        </div>
-        </div>
     </div>
     
     <div id="pdata">
@@ -153,14 +43,20 @@
 
 <script type="module">
 
-import data from "./Data/products.data.js"
+import data from "./Data/products.data.js";
+import nav from "./productnav/productnav.js";
+
+var container = document.getElementById("container");
+container.innerHTML = nav() ;
+
 
 var pdata = document.getElementById("pdata");
 
     data.forEach( i => 
     {
-        pdata.innerHTML = null;
         
+        
+        console.log(i);
         let div = document.createElement("div");
     
         let img = document.createElement("img");
@@ -174,12 +70,30 @@ var pdata = document.getElementById("pdata");
         price.innerHTML = i.price;
 
         div.append(img,title,subtitle,price);
+
+        div.onclick = function()
+                {
+                    if(localStorage.getItem("pdetails")===null)
+                    {
+                        localStorage.setItem("pdetails",JSON.stringify([]));
+                    }
+                    
+                    let pdetails = JSON.parse(localStorage.getItem("pdetails"));
+                    
+                    pdetails.pop()
+                    pdetails.push(i);
+
+                    localStorage.setItem("pdetails",JSON.stringify (pdetails));
+                    
+                    window.location.href = "productdetails.html";
+
+                }
+
         pdata.append(div);
         
     });
 
     var makeup = document.getElementById("makeup");
-
     makeup.onclick = function()
     {
         pdata.innerHTML = null;
@@ -203,11 +117,35 @@ var pdata = document.getElementById("pdata");
                 price.innerHTML = i.price;
 
                 div.append(img,title,subtitle,price);
+
+                div.onclick = function()
+                {
+                    if(localStorage.getItem("pdetails")===null)
+                    {
+                        localStorage.setItem("pdetails",JSON.stringify([]));
+                    }
+                    
+                    let pdetails =JSON.parse(localStorage.getItem("pdetails"));
+                    
+                    pdetails.pop()
+                    pdetails.push(i);
+
+                    localStorage.setItem("pdetails",JSON.stringify (pdetails));
+                    
+                    window.location.href = "productdetails.html";
+
+                }
+
                 pdata.append(div);
                 
             }
         });
-        
+    }
+
+    var collection = document.getElementById("collection");
+    collection.onclick = function()
+    {
+        window.location.href = "products.html";
     }
 
 </script>

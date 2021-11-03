@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productdetails</title>
+    <link rel="stylesheet" href="./productnav/productnav.css">
+    <style>
+        #data
+        {
+            padding-top: 12%;
+           
+            /*  
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding-left: 7%;
+            */
+
+        }
+        #pimgdiv
+        {
+            display: grid;
+            grid-template-columns: 20% 60% 10%;
+            gap: 10%;
+            padding-top: 0%;
+            height: 550px;
+            width: 100%;
+
+            position: fixed;
+            top: 23%;
+            left: 5%;
+            width: 45%;
+        }
+        #psimg
+        {
+            display: grid;
+            grid-template-columns: 100%;                        
+        }
+        #pimg1 ,#pimg2 ,#pimg3 ,#pimg4
+        {
+            padding-top: 10px;
+            height: 120px;
+            width: 70%;
+            margin-left: 20%;
+        }
+
+        #pimg1 > img, #pimg2 > img, #pimg3 > img , #pimg4 > img ,#pimg0 > img
+        {
+            height: 100%;
+            width: 100%;
+            margin-right:20% ;
+        }
+
+        #pimg0
+        {           
+            width: 100%;
+        }
+        #pbagbutton
+        {
+            background-color: black;
+            color:white;
+            width: 30%;
+        }
+        #title
+        {
+            font-size: 16pt;
+            font-weight: bolder;
+        }
+        #subtitle
+        {
+            font-size: 12pt;
+            color: grey;
+        }
+        #rating , #q01
+        {
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        #price
+        {
+            font-size: 16pt;
+        }
+        #pdetails
+        {
+            padding-left: 55%;
+            margin-top: -2%;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container"></div>
+    <br>
+    <div id="data">
+        <div id="pimgdiv" class="pimgdiv">
+            <div id="psimg">
+                    <div id="pimg1"></div>
+					<div id="pimg2"></div>
+					<div id="pimg3"></div>
+                    <div id="pimg4"></div>
+            </div>
+            <div id="pimg0">
+
+            </div>
+        </div>
+        <div id="pdetails">
+            <div>
+                <p id="title">Name</p>
+                <p id="subtitle">Sub Name</p>
+                <p id="rating">Rating</p>
+                <p id="price">Price</p>
+                <p>(MRP incl. of all taxes)</p>
+                <button id="pbagbutton"><h3>Add TO Bag</h3></button>
+                <p id="q01">You will receive cashback worth as myglamm POINTS on this purchase</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<script type="module">
+
+import nav from "./productnav/productnav.js";
+
+var container = document.getElementById("container");
+container.innerHTML = nav() ;
+
+let items = JSON.parse(localStorage.getItem("pdetails"));
+let dict = items[0];
+console.log(dict);
+
+let img1 = document.getElementById("pimg1");
+let img2 = document.getElementById("pimg2");
+let img3 = document.getElementById("pimg3");
+let img4 = document.getElementById("pimg4");
+
+let img0 = document.getElementById("pimg0");
+
+let img01 = document.createElement("img");
+img01.src = dict.img1;
+img1.append(img01);
+
+let img02 = document.createElement("img");
+img02.src = dict.img2;
+img2.append(img02);
+
+let img04 = document.createElement("img");
+img04.src = dict.img4;
+img4.append(img04);
+
+let img03 = document.createElement("img");
+img03.src = dict.img3;
+img3.append(img03);
+
+let img05 = document.createElement("img");
+img05.src = dict.displayimg;
+img0.append(img05);
+
+let title = document.getElementById("title");
+let subtitle = document.getElementById("subtitle");
+let rating = document.getElementById("rating");
+let price = document.getElementById("price");
+
+title.innerHTML = dict.title;
+subtitle.innerHTML = dict.subtitle;
+rating.innerHTML = "Rating : "+dict.rating;
+price.innerHTML = "₹ "+dict.price;
+
+let pbagbutton = document.getElementById("pbagbutton");
+pbagbutton.onclick = function()
+{
+    if(localStorage.getItem("myglammCart")===null)
+    {
+        localStorage.setItem("myglammCart",JSON.stringify([]));
+    }
+    let myglammCart =JSON.parse(localStorage.getItem("myglammCart"));
+                    
+    myglammCart.push(dict);
+
+    localStorage.setItem("myglammCart",JSON.stringify (myglammCart));
+                    
+    window.location.href = "./Cart/cart.html";
+
+}
+
+
+
+</script>
