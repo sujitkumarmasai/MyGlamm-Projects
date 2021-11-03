@@ -1,12 +1,14 @@
 // All Import statements
 import { catagory, sliderImages } from "../Data/index.data.js";
 import { navbar, ShowSignup } from "../Components/navbar.js";
+import { footer } from "../Components/footer.js";
 import data from "../Data/products.data.js";
 // All DOM refferencing
 let catagoryparent = document.getElementById("productbox-catagory");
 let slider = document.getElementById("slider");
 let nav = document.getElementById("navbar");
 let bestseller = document.getElementById("product-parent");
+let foot = document.getElementById("footer");
 // All Normal Variables
 let sliderIndex = 1;
 let bestsellerStart = 0;
@@ -22,6 +24,7 @@ function heading(str) {
 }
 //Code for adding catagory sections rounded-images
 nav.innerHTML = navbar;
+foot.innerHTML = footer;
 catagory.forEach((el) => {
   let img = document.createElement("img");
   img.src = el;
