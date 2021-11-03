@@ -16,29 +16,29 @@ function nav()
         <div class="d4">
             <img src="https://cdn-icons-png.flaticon.com/512/126/126515.png" id="img2">
         </div>
-        <div class="d5">
+        <div class="d5" id="user">
             <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" id="img3">
         </div>
     </div>
     <div id="Main1">
-        <div class="d1">
-            <h5 id="home">HOME</h5>
+        <div class="d1" id="home">
+            <h5 >HOME</h5>
         </div>
-        <div class="d6">
+        <div class="d6" id="collection">
             <h5
-            id="collection">COLLECTION</h5>
+            >COLLECTION</h5>
         </div>
-        <div class="d2">
-            <h5 id="makeup">MAKEUP</h5>
+        <div class="d2" id="makeup">
+            <h5>MAKEUP</h5>
         </div>
-        <div class="d3">
-            <h5 id="haircare">HAIR CARE</h5>
+        <div class="d3" id="haircare">
+            <h5 >HAIR CARE</h5>
         </div>
-        <div class="d4">
-            <h5 id="skincare">SKIN CARE</h5>
+        <div class="d4" id="skincare">
+            <h5 >SKIN CARE</h5>
         </div>
-        <div class="d5">
-            <h5 id="sant">SANITIZING CARE</h5>
+        <div class="d5" id="sant">
+            <h5 >SANITIZING CARE</h5>
         </div>
         <div class="d7">
             <h5 id="rewards">REWARDS</h5>

@@ -2,11 +2,11 @@
 {
     background-color: rgb(255, 255, 255);
     width: 90%;
-    height: 20%;
+    height: 21%;
     margin-left: 5%;
     margin-top: -0.7%;
     position: fixed;
-    border-bottom: 3px solid rgb(152, 143, 143);
+    border-bottom: 1px solid rgb(152, 143, 143);
 }
 #Main,#Main1
 {

@@ -66,7 +66,7 @@ var data = [
     img1: "https://files.myglamm.com/site-images/800x800/indulgence-3.jpeg",
     img2: "https://files.myglamm.com/site-images/800x800/indulgence-2.jpeg",
     img3: "https://files.myglamm.com/site-images/800x800/mm-metallic-lipstick-4.jpeg",
-    img4: "https://files.myglamm.com/site-images/800x800/mm-mood-shot-3.jpeG",
+    img4: "https://files.myglamm.com/site-images/800x800/indulgence-3.jpeg",
     id: 2,
   },
   {
