@@ -31,8 +31,8 @@ let navbar = `
              <button id="mobile-btn">CONTINUE</button>
              <p>Or Continue with</p>
              <div>
-                 <img src="./public/google.png" alt="">
-                 <img src="./public/facebook.png" alt="">
+                 <img id="google"  src="./public/google.png" alt="">
+                 <img id="facebook" src="./public/facebook.png" alt="">
              </div>
          </div>
 `;
@@ -49,4 +49,14 @@ function ShowSignup() {
     // document.body.style.backgroundColor = "white";
   });
 }
-export { navbar, ShowSignup };
+function Images_src_change() {
+  let login = document.getElementById("login");
+  let cart = document.getElementById("cart");
+  let google = document.getElementById("google");
+  let facebook = document.getElementById("facebook");
+  login.src = "../public/account.png";
+  cart.src = "../public/cart.png";
+  google.src = "../public/google.png";
+  facebook.src = "../public/facebook.png";
+}
+export { navbar, ShowSignup, Images_src_change };
