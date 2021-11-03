@@ -8,13 +8,16 @@
 
     <link rel="stylesheet" href="./productnav/productnav.css">
     <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
         #pdata
         {
             display: grid;
             grid-template-columns: 30% 30% 30%;
             width: 90%;
             gap: 2%;
-            padding-top: 13%;
+            margin-top: 1%;
             margin-left: 10%;
         }
         #pdata > div
@@ -43,13 +46,28 @@
             font-weight: bolder;
             font-size: 12pt;
         }
+        #categoryheading
+        {
+            padding-top: 10%;
+            margin-left: 45%;
+            width: fit-content;
+            height: 60px;
+            border-bottom: 13px solid rgb(247, 143, 195);
+        }
+        #categoryheading > p
+        {
+            font-size: 25pt;
+            font-weight: bolder;
+        }
     </style>
 </head>
 <body>
     
     <div id="container">
     </div>
-    
+    <div id="categoryheading">
+        <p id="cathead">Srng</p>
+    </div>
     <div id="pdata">
     </div>
 </body>
@@ -65,6 +83,9 @@ container.innerHTML = nav() ;
 
 
 var pdata = document.getElementById("pdata");
+var cathead = document.getElementById("cathead");
+
+cathead.innerHTML = "  COLLECTION  ";
 
     data.forEach( i => 
     {
@@ -140,6 +161,7 @@ var pdata = document.getElementById("pdata");
     makeup.onclick = function()
     {
         pdata.innerHTML = null;
+        cathead.innerHTML = "  MAKEUP  ";
 
         data.forEach(i =>
         {
@@ -219,6 +241,7 @@ var pdata = document.getElementById("pdata");
     haircare.onclick = function()
     {
         pdata.innerHTML = null;
+        cathead.innerHTML = "  HAIR CARE  ";
 
         data.forEach(i =>
         {
@@ -297,6 +320,7 @@ var pdata = document.getElementById("pdata");
     sanitizingcare.onclick = function()
     {
         pdata.innerHTML = null;
+        cathead.innerHTML = "  SANITIZING CARE  ";
 
         data.forEach(i =>
         {
@@ -376,6 +400,7 @@ var pdata = document.getElementById("pdata");
     skincare.onclick = function()
     {
         pdata.innerHTML = null;
+        cathead.innerHTML = "  SKIN CARE  ";
 
         data.forEach(i =>
         {
