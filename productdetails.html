@@ -98,10 +98,10 @@
     <div id="data">
         <div id="pimgdiv" class="pimgdiv">
             <div id="psimg">
-                    <div id="pimg1"></div>
-					<div id="pimg2"></div>
-					<div id="pimg3"></div>
-                    <div id="pimg4"></div>
+                    <div id="pimg1" ></div>
+					<div id="pimg2" ></div>
+					<div id="pimg3" ></div>
+                    <div id="pimg4" ></div>
             </div>
             <div id="pimg0">
 
@@ -162,6 +162,67 @@ let img05 = document.createElement("img");
 img05.src = dict.displayimg;
 img0.append(img05);
 
+img1.onmouseover = function()
+{
+    img0.innerHTML = null;
+	let img_0=document.createElement("img");
+	img_0.src=dict.img1;
+	img0.append(img_0);    
+}
+img1.onmouseleave = function()
+{
+    outimg();
+}
+
+img2.onmouseover = function()
+{
+    img0.innerHTML = null;
+	let img_0=document.createElement("img");
+	img_0.src=dict.img2;
+	img0.append(img_0);    
+}
+img2.onmouseleave = function()
+{
+    outimg();
+}
+
+img3.onmouseover = function()
+{
+    img0.innerHTML = null;
+	let img_0=document.createElement("img");
+	img_0.src=dict.img3;
+	img0.append(img_0);    
+}
+img3.onmouseleave = function()
+{
+    outimg();
+}
+
+img4.onmouseover = function()
+{
+    img0.innerHTML = null;
+	let img_0=document.createElement("img");
+	img_0.src=dict.img4;
+	img0.append(img_0);    
+}
+img4.onmouseleave = function()
+{
+    outimg();
+}
+
+function outimg()
+{
+        img0.innerHTML = null;
+		let img_0=document.createElement("img");
+		img_0.src=dict.displayimg;
+		img0.append(img_0);
+}
+
+
+
+
+
+
 let title = document.getElementById("title");
 let subtitle = document.getElementById("subtitle");
 let rating = document.getElementById("rating");
@@ -188,7 +249,6 @@ pbagbutton.onclick = function()
     window.location.href = "./Cart/cart.html";
 
 }
-
 
 
 </script>
