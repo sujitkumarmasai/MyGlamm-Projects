@@ -8,6 +8,9 @@ main {
   width: 98.7vw;
   background-color: #f5f5f5;
 }
+main img:hover {
+  cursor: pointer;
+}
 nav {
   width: 100%;
 }
@@ -126,5 +129,7 @@ iframe {
   height: 700px;
   display: block;
   margin: auto;
-  margin-bottom: 20px;
+}
+footer {
+  margin-top: 20px;
 }
