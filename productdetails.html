@@ -7,6 +7,9 @@
     <title>productdetails</title>
     <link rel="stylesheet" href="./productnav/productnav.css">
     <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
         #data
         {
             padding-top: 12%;
@@ -72,10 +75,22 @@
             font-size: 12pt;
             color: grey;
         }
-        #rating , #q01
+        #rating , #q03
         {
             font-size: 12pt;
             font-weight: bold;
+        }
+        #q01 > p
+        {
+            font-size: 12pt;
+            font-weight: bold;
+            padding: 6px;
+        }
+        #q01
+        {
+            background-color: rgb(236, 226, 226);
+            height: fit-content;
+            width: fit-content;
         }
         #price
         {
@@ -86,6 +101,42 @@
             padding-left: 55%;
             margin-top: -2%;
         }
+        #sdata > div
+        {
+            border-top: 2px solid grey;
+            padding-top: 3%;
+            font-weight: bold;
+            margin-right: 7%;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            gap: 3%;
+        }
+        #q02
+        {
+            border-bottom: 3px solid black;    
+        }
+        #q06
+        {
+            margin-left: 6%;
+            font-size: 11pt;
+            font-weight: bold;
+        }
+        #q04
+        {
+            font-size: 11pt;
+            font-weight: bold;
+            font-style: italic;
+        }
+        #q05
+        {
+            margin-top: -2%;
+            margin-right: 10%;
+            font-style: italic;
+        }
+        li
+        {
+         margin-right: 10%;   
+        }
     </style>
 
 </head>
@@ -95,10 +146,10 @@
     <div id="data">
         <div id="pimgdiv" class="pimgdiv">
             <div id="psimg">
-                    <div id="pimg1"></div>
-					<div id="pimg2"></div>
-					<div id="pimg3"></div>
-                    <div id="pimg4"></div>
+                    <div id="pimg1" ></div>
+					<div id="pimg2" ></div>
+					<div id="pimg3" ></div>
+                    <div id="pimg4" ></div>
             </div>
             <div id="pimg0">
 
@@ -112,7 +163,70 @@
                 <p id="price">Price</p>
                 <p>(MRP incl. of all taxes)</p>
                 <button id="pbagbutton"><h3>Add TO Bag</h3></button>
-                <p id="q01">You will receive cashback worth as myglamm POINTS on this purchase</p>
+                <br>
+                <div id="q01">
+                    <p>  You will receive cashback worth as myglamm POINTS on this purchase       </p>
+                </div>
+            </div>
+            <div id="sdata">
+                <div>
+                    <div id="q02">
+                        WHAT IT IS
+                    </div>
+                    <div>
+                        HOW TO USE
+                    </div>
+                    <div>
+                        MY-GLAMM TIPS
+                    </div>
+                    <div>
+                        WHAT'S IN IT
+                    </div>
+                    <div>
+                        FAQ's
+                    </div>
+                </div>
+                <br>
+                <p id="q03">Give It To Me Quick:</p>
+                <li id="q06"> Combination of matte and shimmer shadows </li>
+                <li id="q06">Highly-pigmented and long-lasting </li>
+                <li id="q06">Enriched with Vitamin E </li>
+                <li id="q06">Blends easily </li>
+                <li id="q06">Trendy colours </li>
+                <li id="q06">Sustainable paper packaging with magnetic closure </li>
+                <br>
+                <p id="q03">Tell Me More </p>
+                <p id="q04">Makeup so fab, everyone is asking for your nude… eyeshadow palette!</p>
+                <p id="q05"> 
+                    Send Noods is a gorgeous pocket-sized 4-in-1 eye shadow palette that contains 2 shimmer and 2 matte shades. 
+                    The brown and blush-toned nudes in this eyeshadow palette are all you need to coast your #MOTD from soft Glamm 
+                    to seriously stunning every single day!
+                    PSA for all our trendy girls on the block! 
+                    We hear your appeal for an affordable eye shadow palette, 
+                    and raise you a versatile, highly functional, and aesthetic eyeshadow palette that 
+                    Pinterest dreams are made of! For all you divas on-the-go, this mini eyeshadow palette is 
+                    perfect for beginners as well as professional makeup artists. Easy to use and intensely pigmented, 
+                    this formula delivers a rich colour payoff in just one swipe. But that's not it! 
+                    You can also use this multi-tasking eye shadow kit for contouring, 
+                    highlighting and adding a flush of colour to your cheeks. What's not to like?
+                </p>
+                <p id="q03">Benefits</p>
+                <li>
+                    Who Is It For: Easy to use, this high-quality eyeshadow kit is perfect for both, beginners and professionals. 
+                    Its compact packaging also makes it travel-friendly and is suitable for divas who are looking for makeup on the go.
+                </li>
+                <li>
+                    Drop It Like It’s Hot: Stunning shades in this makeup kit allow you to 
+                    design gorgeous trending eye makeup looks for bomb makeup selfies!
+                </li>
+                <li>
+                    Formula To Die For: This palette includes an intensely pigmented formula that delivers a rich colour payoff.
+                    Its smooth texture allows you to design stunning makeup looks that are seamlessly blended and avoids harsh lines.
+                </li>
+                <p id="q03">Disclaimer:</p>
+                <p>
+                    Colours of the makeup may vary due to the differences in computer monitors and phone screen resolutions.
+                </p>
             </div>
         </div>
     </div>
@@ -159,6 +273,62 @@ let img05 = document.createElement("img");
 img05.src = dict.displayimg;
 img0.append(img05);
 
+img1.onmouseover = function()
+{
+    img0.innerHTML = null;
+	let img_0=document.createElement("img");
+	img_0.src=dict.img1;
+	img0.append(img_0);    
+}
+img1.onmouseleave = function()
+{
+    outimg();
+}
+
+img2.onmouseover = function()
+{
+    img0.innerHTML = null;
+	let img_0=document.createElement("img");
+	img_0.src=dict.img2;
+	img0.append(img_0);    
+}
+img2.onmouseleave = function()
+{
+    outimg();
+}
+
+img3.onmouseover = function()
+{
+    img0.innerHTML = null;
+	let img_0=document.createElement("img");
+	img_0.src=dict.img3;
+	img0.append(img_0);    
+}
+img3.onmouseleave = function()
+{
+    outimg();
+}
+
+img4.onmouseover = function()
+{
+    img0.innerHTML = null;
+	let img_0=document.createElement("img");
+	img_0.src=dict.img4;
+	img0.append(img_0);    
+}
+img4.onmouseleave = function()
+{
+    outimg();
+}
+
+function outimg()
+{
+        img0.innerHTML = null;
+		let img_0=document.createElement("img");
+		img_0.src=dict.displayimg;
+		img0.append(img_0);
+}
+
 let title = document.getElementById("title");
 let subtitle = document.getElementById("subtitle");
 let rating = document.getElementById("rating");
@@ -185,7 +355,6 @@ pbagbutton.onclick = function()
     window.location.href = "./Cart/cart.html";
 
 }
-
 
 
 </script>
