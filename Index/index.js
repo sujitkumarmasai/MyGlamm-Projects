@@ -65,6 +65,11 @@ function addBestseller(start, end) {
     price.setAttribute("id", "price");
     price.textContent = "₹ " + data[i].price;
     card.appendChild(price);
+    card.addEventListener("click", () => {
+      localStorage.setItem("pdetails", JSON.stringify([data[i]]));
+      window.location.href = "productdetails.html";
+      // console.log("ok");
+    });
     bestseller.appendChild(card);
   }
 }
