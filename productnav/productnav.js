@@ -14,7 +14,7 @@ function nav()
             <button class="btn1">Refer & Earn</button>
         </div>
         <div class="d4">
-            <img src="https://cdn-icons-png.flaticon.com/512/126/126515.png" id="img2">
+        <a href="./Cart/cart.html"><img src="https://cdn-icons-png.flaticon.com/512/126/126515.png" id="img2"></a>
         </div>
         <div class="d5" id="user">
             <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" id="img3">

@@ -32,7 +32,20 @@
 }
 #sub_div{
     margin-top: 100px;
-    /* border: 1px solid green; */
+   /* display: grid;
+   grid-template-columns: 100%; */
+    
+}
+#product_div{
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: center;
+}
+/* #product_div > div{
+    display: flex;
+} */
+#product_div >div > img {
+    width: 12%;
 }
 #sub_div > p {
     font-size: 30px;
@@ -58,6 +71,7 @@ footer > p {
     width: 75%;
     margin-left: 35%;
     margin-bottom: 50px;
+    display: none;
 }
 #checkout_btn > button{
     background-color: black;
@@ -105,4 +119,32 @@ footer > p {
     
    
     
+}
+
+#bag_heading{
+    /* display: flex; */
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-top: 50px;
+    font-size: 14px;
+    display: none;
+}
+#total_value{
+    width: 100%;
+    height: 55px;
+    background-color: #EEEEEE;
+    display: none;
+    margin-top: 8px;
+}
+
+#total_value > p, #total_value > div{
+       margin: auto;
+}
+#total{
+    margin-right: 250px;
+}
+#total_amount{
+    display: flex;
 }
