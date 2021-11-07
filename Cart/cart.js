@@ -47,43 +47,51 @@ function showProducts() {
 
         
         function increassQuantirty() {
-            quantity.innerText = ++c;
-            if (quantity.innerText >= 10) {
-                quantity.innerText = Number(10);
-                plus.removeEventListener("click", increassQuantirty);
-                minus.addEventListener("click", decressQuantirty);
-
+            if(c == 5){
+                quantity.innerText = 5;
+                // plus.removeEventListener("click", increassQuantirty);
+                // console.log(c);
+                individual_total_amount.innerText =  product.price * +quantity.innerText;
+           
                 plus.style.color = "#BDBDBD";
 
                 // individual_total_amount.innerText = "₹" + product.price * c;
             } else {
+                quantity.innerText =++c;;
+                individual_total_amount.innerText =  product.price * +quantity.innerText;
                 minus.style.color = "black";
             }
 
-            individual_total_amount.innerText =  product.price * c;
-            // console.log(individual_total_amount.innerText , "im")
-            // subtotal += product.price * c;
-            // console.log(subtotal);
+        //     individual_total_amount.innerText =  product.price * c;
+        //     // console.log(individual_total_amount.innerText , "im")
+        //     // subtotal += product.price * c;
+        //     // console.log(subtotal);
            
-           subtotal = (Number(individual_total_amount.innerText) + subtotal)
+        //    subtotal = (Number(individual_total_amount.innerText) + subtotal)
         }
 
         // console.log(subtotal+ increassQuantirty());
 
         function decressQuantirty() {
-            quantity.innerText = --c;
-
-            if (quantity.innerText <= 1) {
-                quantity.innerText = Number(1);
-                minus.removeEventListener("click", decressQuantirty);
-                plus.addEventListener("click", increassQuantirty);
+            if (c <= 1) {
+                quantity.innerText = 1;
+                individual_total_amount.innerText =  product.price * +quantity.innerText;
                 minus.style.color = "#BDBDBD";
+                plus.style.color = "black";
                 // individual_total_amount.innerText = "₹" + product.price * c;
             }
+            else{
+                quantity.innerText = --c;
+               
+                individual_total_amount.innerText =  product.price * +quantity.innerText;
+                  subtotal = (Number(individual_total_amount.innerText) + subtotal)
+                  console.log(subtotal, "decrease item");
+                  plus.style.color = "black";
+                }
 
-            individual_total_amount.innerText =  product.price * c;
-            subtotal = (Number(individual_total_amount.innerText) + subtotal)
-            // console.log(subtotal);
+            // individual_total_amount.innerText =  product.price * c;
+            // subtotal = (Number(individual_total_amount.innerText) + subtotal)
+            // // console.log(subtotal);
             
         }
 
