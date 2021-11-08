@@ -38,6 +38,7 @@ let navbar = `
 `;
 function ShowSignup() {
   let login = document.getElementById("login");
+  let cart = document.getElementById("cart");
   let login_popup = document.getElementById("login-popup");
   let popup_X = document.getElementById("popup-X");
   login.addEventListener("click", () => {
@@ -47,6 +48,9 @@ function ShowSignup() {
   popup_X.addEventListener("click", () => {
     login_popup.style.display = "none";
     // document.body.style.backgroundColor = "white";
+  });
+  cart.addEventListener("click", () => {
+    window.location.href = "./Cart/cart.html";
   });
 }
 function Images_src_change() {
