@@ -64,6 +64,14 @@ button:hover {
   height: 60%;
   margin-top: 0.7%;
 }
+#cart-length {
+  position: absolute;
+  z-index: 100;
+  right: 14%;
+  background-color: hotpink;
+  padding: 0.3%;
+  border-radius: 100%;
+}
 #login {
   position: relative;
   left: 16%;

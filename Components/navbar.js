@@ -9,6 +9,7 @@ let navbar = `
              <input id="search" placeholder="Find Lipstick, Eyeliner, Makeup Tutorial etc." type="text">
              <button id="navbar-btn">Refer & Earn </button>
              <img id="cart" src="https://cdn-icons-png.flaticon.com/512/126/126515.png" alt="">
+             <p id="cart-length"></p>
              <img id="login" src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="">
          </div>
          <div class="bottom">
@@ -38,6 +39,7 @@ let navbar = `
 `;
 function ShowSignup() {
   let login = document.getElementById("login");
+  let cartLength = document.getElementById("cart-length");
   let cart = document.getElementById("cart");
   let login_popup = document.getElementById("login-popup");
   let popup_X = document.getElementById("popup-X");
@@ -52,6 +54,11 @@ function ShowSignup() {
   cart.addEventListener("click", () => {
     window.location.href = "./Cart/cart.html";
   });
+  let data = JSON.parse(localStorage.getItem("myglammCart"));
+  if (data) {
+    cartLength.textContent = data.length;
+    console.log(data.length);
+  }
 }
 function Images_src_change() {
   let login = document.getElementById("login");
