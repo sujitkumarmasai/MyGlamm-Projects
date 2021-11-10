@@ -1,4 +1,4 @@
-let footer = `<hr />
+let footer = `
         <br />
         <br />
         <div id="footer" style="margin-top: -4%">

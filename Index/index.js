@@ -8,7 +8,7 @@ let catagoryparent = document.getElementById("productbox-catagory");
 let slider = document.getElementById("slider");
 let nav = document.getElementById("navbar");
 let bestseller = document.getElementById("product-parent");
-let foot = document.getElementById("footer");
+let foot = document.getElementById("footer2");
 // All Normal Variables
 let sliderIndex = 1;
 let bestsellerStart = 0;

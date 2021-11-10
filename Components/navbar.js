@@ -8,19 +8,19 @@ let navbar = `
              <img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="">
              <input id="search" placeholder="Find Lipstick, Eyeliner, Makeup Tutorial etc." type="text">
              <button id="navbar-btn">Refer & Earn </button>
-             <img id="cart" src="./public/cart.png" alt="">
-             <img id="login" src="./public/account.png" alt="">
+             <img id="cart" src="https://cdn-icons-png.flaticon.com/512/126/126515.png" alt="">
+             <img id="login" src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="">
          </div>
          <div class="bottom">
-             <h3 class="nav-link">HOME</h3>
-             <h3 class="nav-link">MAKEUP</h3>
-             <h3 class="nav-link">HAIR CARE</h3>
-             <h3 class="nav-link">SKIN CARE</h3>
-             <h3 class="nav-link">SANITIZING CARE</h3>
-             <h3 class="nav-link">COLLECTION</h3>
-             <h3 class="nav-link">REWARDS</h3>
-             <h3 class="nav-link">MYGLAMM STUDIO</h3>
-             <h3 class="nav-link">OFFERS</h3>
+             <h3 class="nav-link" onClick="window.location.href='products.html'">HOME</h3>
+             <h3 class="nav-link" onClick="window.location.href='products.html'">MAKEUP</h3>
+             <h3 class="nav-link" onClick="window.location.href='products.html'">HAIR CARE</h3>
+             <h3 class="nav-link" onClick="window.location.href='products.html'">SKIN CARE</h3>
+             <h3 class="nav-link" onClick="window.location.href='products.html'">SANITIZING CARE</h3>
+             <h3 class="nav-link" onClick="window.location.href='products.html'">COLLECTION</h3>
+             <h3 class="nav-link" onClick="window.location.href='products.html'">REWARDS</h3>
+             <h3 class="nav-link" onClick="window.location.href='products.html'">MYGLAMM STUDIO</h3>
+             <h3 class="nav-link" onClick="window.location.href='products.html'">OFFERS</h3>
          </div>
          <div id="login-popup">
              <h2 id="popup-X">X</h2>
