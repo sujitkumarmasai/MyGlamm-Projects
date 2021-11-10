@@ -203,3 +203,9 @@ if (cartitems.length < 1) {
 }
 
 showProducts();
+
+var checkoutbtn = document.getElementById("checkout_btn");
+checkoutbtn.onclick = function()
+{
+    window.location.href = "../Checkout/checkout.html"
+}

@@ -100,7 +100,9 @@ hr {
 
 #address_details {
     height: 85%;
-
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
 }
 
 #address {
@@ -240,4 +242,31 @@ input{
     padding-left: 10px;
     color:#EC407A ;
     font-weight: 600;
+}
+
+#ip , #op
+{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+#ip > input
+{
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    font-weight: bolder;
+}
+#ip
+{
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 3.3%;
+}
+#op
+{
+    padding-top: 7%;
+    font-size: large;
+    font-weight: bolder;
 }
