@@ -63,9 +63,9 @@ function showProducts() {
 
         // var individual_total_amount = document.createElement("p");
 
-        
+        var q = 1
         function increassQuantirty() {
-            if(c == 5){
+            if(q >= 5){
                 quantity.innerText = 5;
                 // plus.removeEventListener("click", increassQuantirty);
                 // console.log(c);
@@ -75,7 +75,7 @@ function showProducts() {
 
                 // individual_total_amount.innerText = "₹" + product.price * c;
             } else {
-                quantity.innerText =++c;;
+                quantity.innerText = ++q;
                 individual_total_amount.innerText =  product.price * +quantity.innerText;
                 minus.style.color = "black";
 
@@ -100,8 +100,9 @@ function showProducts() {
 
         // console.log(subtotal+ increassQuantirty());
         
+        var s = q;
         function decressQuantirty() {
-            if (c <= 1) {
+            if (q <= 1) {
                 quantity.innerText = 1;
                 individual_total_amount.innerText =  product.price * +quantity.innerText;
                 minus.style.color = "#BDBDBD";
@@ -109,7 +110,7 @@ function showProducts() {
                 // individual_total_amount.innerText = "₹" + product.price * c;
             }
             else{
-                quantity.innerText = --c;
+                quantity.innerText = --q;
                
                 individual_total_amount.innerText =  product.price * +quantity.innerText;
                   subtotal = (Number(individual_total_amount.innerText) + subtotal)
