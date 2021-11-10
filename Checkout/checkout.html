@@ -33,13 +33,25 @@
         </div>
         <div id="subdiv">
             <div id="address">
-                <p><b>SHIPPING ADDRESS</b></p>
+                <p><b>CHECK SHIPPING ADDRESS</b></p>
+                <div>
+
+                </div>
                 <hr id="hr1">
                 <div id="shipping_details">
                     <div id="address_details">
+                        <div id="ip">
+                            <input type="text" placeholder="  Enter City Name : " id="city">
+                            <input type="text" placeholder="  Enter State Name : " id="state">
+                            <input type="number" placeholder="  Enter Pincode : " id="pin">
+                        </div>
+                        <div id="op">
+                            
 
+
+                        </div>
                     </div>
-                    <button>Change</button>
+                    <button onclick="ckeckaddr()">Check</button>
                 </div>
 
                 <div id="expected_delivery">
@@ -47,7 +59,7 @@
                     <span>
                         <p><b id="delivery">Expected Delivery Date</b></p>
                     </span>
-                    <span>25-Nov-2021</span>
+                    <span>after three days...!</span>
                 </div>
                 <div>
                     <div id="billing">
@@ -126,3 +138,4 @@
 </body>
 
 </html>
+<script src="checkout.js"></script>

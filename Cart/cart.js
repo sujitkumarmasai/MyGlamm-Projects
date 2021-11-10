@@ -4,69 +4,123 @@ let cartitems = JSON.parse(localStorage.getItem("myglammCart"));
 var subtotal = 0;
 var c = 1;
 function showProducts() {
-  cartitems.forEach(function (product) {
-    cartitems.innerHTML = null;
+    cartitems.forEach(function (product) {
+        cartitems.innerHTML = null;
 
-    let div = document.createElement("div");
+        let div = document.createElement("div");
 
-    let img = document.createElement("img");
-    img.src = product.displayimg;
 
-    let product_price = document.createElement("p");
-    product_price.textContent = "₹" + product.price;
-    let product_name = document.createElement("p");
-    product_name.textContent = product.title;
+        let img = document.createElement("img");
+        img.src = product.displayimg;
 
-    let quantity_div = document.createElement("div");
-    let plus = document.createElement("p");
-    let quantity = document.createElement("p");
-    let minus = document.createElement("p");
-    quantity.innerText = c;
+        let product_price = document.createElement("p");
+        product_price.textContent = "₹" + product.price;
+        let product_name = document.createElement("p");
+        product_name.textContent = product.title;
 
-    // -----style----
-    product_name.setAttribute(
-      "style",
-      "font-size:16px; margin: 20px 35px;width:350px"
-    );
-    product_price.setAttribute("style", "font-size:20px; margin: 40px 40px;");
-    div.setAttribute("style", "Margin-top:30px; display:flex;");
-    quantity_div.setAttribute(
-      "style",
-      "display:flex;justify-content:center; align-items:center; width:100px;height:60px; background-color:#EEEEEE;margin:30px 100px;position:relative;"
-    );
+       
+        let quantity_div = document.createElement("div");
+        let plus = document.createElement("p");
+        let quantity = document.createElement("p");
+        let minus = document.createElement("p");
+        quantity.innerText = c;
 
-    plus.innerText = "+";
+        // -----style----
+        product_name.setAttribute("style", "font-size:16px; margin: 20px 35px;width:350px")
+        product_price.setAttribute("style", "font-size:20px; margin: 40px 40px;")
+        div.setAttribute("style", "Margin-top:30px; display:flex;");
+        quantity_div.setAttribute("style", "display:flex;justify-content:center; align-items:center; width:100px;height:60px; background-color:#EEEEEE;margin:30px 100px;position:relative;");
 
-    plus.setAttribute(
-      "style",
-      "font-size:30px; margin-left:10px;cursor:pointer;"
-    );
-    minus.setAttribute(
-      "style",
-      "font-size:30px; margin-right:12px;cursor:pointer;color:#BDBDBD;"
-    );
 
-    minus.innerText = "-";
-    plus.addEventListener("click", increassQuantirty);
-    minus.addEventListener("click", decressQuantirty);
 
-    // var individual_total_amount = document.createElement("p");
+        plus.innerText = "+";
 
-    function increassQuantirty() {
-      if (c == 5) {
-        quantity.innerText = 5;
-        // plus.removeEventListener("click", increassQuantirty);
-        // console.log(c);
-        individual_total_amount.innerText = product.price * +quantity.innerText;
+        plus.setAttribute("style", "font-size:30px; margin-left:10px;cursor:pointer;")
+        minus.setAttribute("style", "font-size:30px; margin-right:12px;cursor:pointer;color:#BDBDBD;")
 
-        plus.style.color = "#BDBDBD";
+        minus.innerText = "-";
+        plus.addEventListener("click", increassQuantirty);
+        minus.addEventListener("click", decressQuantirty);
 
-        individual_total_amount.innerText = "₹" + product.price * c;
-      } else {
-        quantity.innerText = ++c;
-        individual_total_amount.innerText = product.price * +quantity.innerText;
-        minus.style.color = "black";
-      }
+        // var individual_total_amount = document.createElement("p");
+
+        
+        function increassQuantirty() {
+            if(c == 5){
+                quantity.innerText = 5;
+                // plus.removeEventListener("click", increassQuantirty);
+                // console.log(c);
+                individual_total_amount.innerText =  product.price * +quantity.innerText;
+           
+                plus.style.color = "#BDBDBD";
+
+                // individual_total_amount.innerText = "₹" + product.price * c;
+            } else {
+                quantity.innerText =++c;;
+                individual_total_amount.innerText =  product.price * +quantity.innerText;
+                minus.style.color = "black";
+
+                console.log(product.price * +quantity.innerText);
+
+            }
+
+        //     individual_total_amount.innerText =  product.price * c;
+        //     // console.log(individual_total_amount.innerText , "im")
+        //     // subtotal += product.price * c;
+        //     // console.log(subtotal);
+           
+        //    subtotal = (Number(individual_total_amount.innerText) + subtotal)
+        }
+
+        // console.log(subtotal+ increassQuantirty());
+
+        function decressQuantirty() {
+            if (c <= 1) {
+                quantity.innerText = 1;
+                individual_total_amount.innerText =  product.price * +quantity.innerText;
+                minus.style.color = "#BDBDBD";
+                plus.style.color = "black";
+                // individual_total_amount.innerText = "₹" + product.price * c;
+            }
+            else{
+                quantity.innerText = --c;
+               
+                individual_total_amount.innerText =  product.price * +quantity.innerText;
+                  subtotal = (Number(individual_total_amount.innerText) + subtotal)
+                  console.log(subtotal, "decrease item");
+                  plus.style.color = "black";
+                }
+
+            // individual_total_amount.innerText =  product.price * c;
+            // subtotal = (Number(individual_total_amount.innerText) + subtotal)
+            // // console.log(subtotal);
+            
+        }
+
+        quantity.setAttribute("style", "font-size:30px;")
+
+        // console.log(quantity)
+        var individual_total_amount = document.createElement("p");
+        individual_total_amount.innerText =  product.price * c;
+
+    //    console.log(Number(individual_total_amount.innerText));
+    //    console.log(individual_total_amount.innerText , "im")
+        individual_total_amount.setAttribute("style", "font-size:20px; margin-top: 40px;")
+
+        //         ------>remove item<-------
+
+        var remove_item = document.createElement("img");
+        remove_item.src = "https://www.pngfind.com/pngs/m/9-98161_x-mark-x-alphabet-icon-hd-png-download.png";
+        remove_item.setAttribute("style", "width:30px; height:20px;margin:40px 70px;cursor:pointer;");
+
+        
+
+       
+
+        remove_item.onclick=function(){
+            removetoCart(event,product)
+          };
+
 
       individual_total_amount.innerText = product.price * c;
       // console.log(individual_total_amount.innerText , "im")
@@ -206,19 +260,9 @@ if (cartitems.length < 1) {
 }
 
 showProducts();
-let TOTAL = document.getElementById("");
-// console.log(TOTAL)
 
-let total = 0;
-cart.forEach(function (product) {
-  let cart = JSON.parse(localStorage.getItem(""));
-
-  console.log(product.Price);
-  total = total + parseInt(product.Price);
-  console.log(typeof total);
-  TOTAL.innerText = total;
-
-  TOTAL.style.fontWeight = "bold";
-
-  //console.log(total)
-});
+var checkoutbtn = document.getElementById("checkout_btn");
+checkoutbtn.onclick = function()
+{
+    window.location.href = "../Checkout/checkout.html"
+}
