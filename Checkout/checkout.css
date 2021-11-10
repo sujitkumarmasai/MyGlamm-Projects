@@ -257,6 +257,8 @@ input{
     width: 100%;
     border: 2px solid black;
     font-weight: bolder;
+    font-size: 11pt;
+    
 }
 #ip
 {

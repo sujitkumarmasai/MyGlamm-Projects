@@ -60,6 +60,9 @@ function showProducts() {
                 quantity.innerText =++c;;
                 individual_total_amount.innerText =  product.price * +quantity.innerText;
                 minus.style.color = "black";
+
+                console.log(product.price * +quantity.innerText);
+
             }
 
         //     individual_total_amount.innerText =  product.price * c;
