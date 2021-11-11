@@ -12,11 +12,6 @@ var total_amount = document.getElementById("total_amount");
     "margin-left:-52%;font-weight:600;font-size:20px"
   );
 
-  //amount.innerText = subtotal;
-  // amount.innerText = srng;
-  // total_amount.append(amount);
-
-
 function showProducts() {
     cartitems.forEach(function (product) {
         cartitems.innerHTML = null;
@@ -67,13 +62,10 @@ function showProducts() {
         function increassQuantirty() {
             if(q >= 5){
                 quantity.innerText = 5;
-                // plus.removeEventListener("click", increassQuantirty);
-                // console.log(c);
                 individual_total_amount.innerText =  product.price * +quantity.innerText;
            
                 plus.style.color = "#BDBDBD";
 
-                // individual_total_amount.innerText = "₹" + product.price * c;
             } else {
                 quantity.innerText = ++q;
                 individual_total_amount.innerText =  product.price * +quantity.innerText;
@@ -88,14 +80,6 @@ function showProducts() {
                 console.log(product.price * +quantity.innerText);
 
             }
-
-        //     individual_total_amount.innerText =  product.price * c;
-        //     // console.log(individual_total_amount.innerText , "im")
-        //     // subtotal += product.price * c;
-        //     // console.log(subtotal);
-           
-        //    subtotal = (Number(individual_total_amount.innerText) + subtotal)
-        
         }
 
         // console.log(subtotal+ increassQuantirty());
@@ -124,11 +108,6 @@ function showProducts() {
                   total_amount.append(amount);
 
                 }
-
-            // individual_total_amount.innerText =  product.price * c;
-            // subtotal = (Number(individual_total_amount.innerText) + subtotal)
-            // // console.log(subtotal);
-            
         }
 
         quantity.setAttribute("style", "font-size:30px;")
@@ -137,8 +116,6 @@ function showProducts() {
         var individual_total_amount = document.createElement("p");
         individual_total_amount.innerText =  product.price * c;
 
-    //    console.log(Number(individual_total_amount.innerText));
-    //    console.log(individual_total_amount.innerText , "im")
         individual_total_amount.setAttribute("style", "font-size:20px; margin-top: 40px;")
 
         //         ------>remove item<-------
@@ -157,46 +134,6 @@ function showProducts() {
 
 
       individual_total_amount.innerText = product.price * c;
-      // console.log(individual_total_amount.innerText , "im")
-      //   subtotal += product.price * c;
-      // console.log(subtotal);
-
-      //   subtotal = Number(individual_total_amount.innerText) + subtotal;
-      //let TOTAL = document.getElementById("");
-      // console.log(TOTAL)
-    
-
-    // console.log(subtotal+ increassQuantirty());
-  
-    // function decressQuantirty() {
-    //   if (c <= 1) {
-    //     quantity.innerText = 1;
-    //     individual_total_amount.innerText = product.price * +quantity.innerText;
-    //     minus.style.color = "#BDBDBD";
-    //     plus.style.color = "black";
-    //     // individual_total_amount.innerText = "₹" + product.price * c;
-    //   } else {
-    //     quantity.innerText = --c;
-
-    //     individual_total_amount.innerText = product.price * +quantity.innerText;
-    //     subtotal = Number(individual_total_amount.innerText) + subtotal;
-    //     console.log(subtotal, "decrease item");
-    //     plus.style.color = "black";
-
-    //     srng -= product.price;
-    //     console.log(srng+" srng");
-
-    //     amount.innerText = srng;
-    //     total_amount.append(amount);
-
-    //   }
-
-    //   // individual_total_amount.innerText =  product.price * c;
-    //   // subtotal = (Number(individual_total_amount.innerText) + subtotal)
-    //   // // console.log(subtotal);
-    // }
-
-    // quantity.setAttribute("style", "font-size:30px;");
 
     // console.log(quantity)
     var individual_total_amount = document.createElement("p");
@@ -244,9 +181,6 @@ function showProducts() {
     );
 
     parent.append(div, line);
-
-    // subtotal += product.price * c;
-    // console.log(subtotal)
   });
 
   //         ------>remove item function<-------
@@ -267,20 +201,9 @@ function showProducts() {
 
   //         ------>remove item function<-------
 
-
-
-
-  // var total_amount = document.getElementById("total_amount");
-  // var amount = document.createElement("p");
-  // amount.setAttribute(
-  //   "style",
-  //   "margin-left:-52%;font-weight:600;font-size:20px"
-  // );
-
-  // //amount.innerText = subtotal;
-  // amount.innerText = srng;
-  // total_amount.append(amount);
 }
+
+
 var total_value = document.getElementById("total_value");
 var bag_heading = document.getElementById("bag_heading");
 var checkout_btn = document.getElementById("checkout_btn");
@@ -306,9 +229,29 @@ if (cartitems.length < 1) {
 
 showProducts();
 
+
+
+
+
+
+
+
+
 var checkoutbtn = document.getElementById("checkout_btn");
 checkoutbtn.onclick = function()
 {
+  if(localStorage.getItem("myglamm-total")===null)
+  {
+      localStorage.setItem("myglamm-total",JSON.stringify([]));
+  }
+  
+  let myglammtotal = JSON.parse(localStorage.getItem("myglamm-total"));
+  
+  myglammtotal.pop()
+  myglammtotal.push(srng);
+
+  localStorage.setItem("myglamm-total",JSON.stringify (myglammtotal));
+  
     window.location.href = "../Checkout/checkout.html"
 }
 

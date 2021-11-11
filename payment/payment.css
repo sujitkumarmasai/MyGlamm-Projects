@@ -72,8 +72,9 @@ h5 {
   display: inline;
   font-size: 1.3rem;
 }
-#total {
-  margin-left: 65%;
+#total 
+{
+  margin-left: 62%;
 }
 /* #details > div:nth-child(2) {
   } */
