@@ -174,6 +174,7 @@ hr {
 #order_summary{
     display: flex;
     margin-top: 30px;
+    
 }
 ul{
     list-style-type: none;

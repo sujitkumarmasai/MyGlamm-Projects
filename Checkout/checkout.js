@@ -95,7 +95,7 @@ function promo()
         if (applypromo.value === "masai30") 
         {
             srng = srng - (srng* (30/100));
-            console.log(srng.toFixed(2));
+            console.log(srng.toFixed(0));
     
             let p = document.createElement("p");
             let q01 = document.getElementById("q01");
@@ -113,7 +113,7 @@ function promo()
             payamount.style.fontWeight = "bold";
             payamount.style.textAlign = "right";
     
-            payamount.innerHTML = "₹ "+srng.toFixed(2);
+            payamount.innerHTML = "₹ "+srng.toFixed(0);
     
     
             if(localStorage.getItem("myglamm-promo")===null)
@@ -124,7 +124,7 @@ function promo()
             let myglammpromo = JSON.parse(localStorage.getItem("myglamm-promo"));
             
             myglammpromo.pop()
-            myglammpromo.push(srng.toFixed(2));
+            myglammpromo.push(srng.toFixed(0));
           
             localStorage.setItem("myglamm-promo",JSON.stringify (myglammpromo));
         } 
@@ -140,7 +140,7 @@ function promo()
             let myglammpromo = JSON.parse(localStorage.getItem("myglamm-promo"));
             
             myglammpromo.pop()
-            myglammpromo.push(srng);
+            myglammpromo.push(srng.toFixed(0));
           
             localStorage.setItem("myglamm-promo",JSON.stringify (myglammpromo));
     
@@ -166,7 +166,7 @@ function promo()
             let myglammpromo = JSON.parse(localStorage.getItem("myglamm-promo"));
             
             myglammpromo.pop()
-            myglammpromo.push(srng);
+            myglammpromo.push(srng.toFixed(0));
           
             localStorage.setItem("myglamm-promo",JSON.stringify (myglammpromo));
     
