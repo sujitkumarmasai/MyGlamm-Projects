@@ -5,7 +5,7 @@ paymentbtm.onclick = function()
 }
 
 
-let total01 = JSON.parse(localStorage.getItem("myglamm-total"));
+let total01 = JSON.parse(localStorage.getItem("myglamm-promo"));
 let stotal = total01[0];
 console.log(stotal);
 
@@ -13,7 +13,7 @@ console.log(stotal);
 
 var total = document.getElementById("total");
 total.innerHTML = null;
-var srng = stotal+90;
+var srng = stotal;
 total.append("Rs "+srng);
 
 
