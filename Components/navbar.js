@@ -54,11 +54,6 @@ function ShowSignup() {
   cart.addEventListener("click", () => {
     window.location.href = "./Cart/cart.html";
   });
-  let data = JSON.parse(localStorage.getItem("myglammCart"));
-  if (data) {
-    cartLength.textContent = data.length;
-    console.log(data.length);
-  }
 }
 function Images_src_change() {
   let login = document.getElementById("login");
