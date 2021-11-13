@@ -174,6 +174,7 @@ hr {
 #order_summary{
     display: flex;
     margin-top: 30px;
+    
 }
 ul{
     list-style-type: none;
@@ -185,7 +186,7 @@ li{
     margin-left: 50%;
 }
 #final_amount{
-    margin-left: 54%;
+    margin-left: 50%;
 }
 #promocode{
     margin-top: 10px;
@@ -237,6 +238,10 @@ input{
     background-color: black;
     text-transform: uppercase;
     margin-bottom: 15px;
+}
+#apply_promo
+{
+    font-weight: 600;
 }
 #apply_promo::placeholder{
     padding-left: 10px;

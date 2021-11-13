@@ -81,4 +81,105 @@ function ckeckaddr()
 
 }
 
+var s01 = 0;
+function promo() 
+{
+    let applypromo = document.getElementById("apply_promo")
 
+    console.log(srng);
+
+    if(s01 == 0)
+    {
+        s01 = 1;
+
+        if (applypromo.value === "masai30") 
+        {
+            srng = srng - (srng* (30/100));
+            console.log(srng.toFixed(0));
+    
+            let p = document.createElement("p");
+            let q01 = document.getElementById("q01");
+            q01.innerHTML = null;
+            p.innerText = "Promocode Applied...!"
+            q01.append(p);
+            q01.style.color = "#09b109";
+            q01.style.fontWeight = "bolder";
+            q01.style.paddingLeft = "2%";
+            q01.style.paddingTop = "2%";
+    
+            var payamount = document.getElementById("payamount");
+                    
+            payamount.innerHTML = null;
+            payamount.style.fontWeight = "bold";
+            payamount.style.textAlign = "right";
+    
+            payamount.innerHTML = "₹ "+srng.toFixed(0);
+    
+    
+            if(localStorage.getItem("myglamm-promo")===null)
+            {
+                localStorage.setItem("myglamm-promo",JSON.stringify([]));
+            }
+            
+            let myglammpromo = JSON.parse(localStorage.getItem("myglamm-promo"));
+            
+            myglammpromo.pop()
+            myglammpromo.push(srng.toFixed(0));
+          
+            localStorage.setItem("myglamm-promo",JSON.stringify (myglammpromo));
+        } 
+        
+        else 
+        {
+    
+            if(localStorage.getItem("myglamm-promo")===null)
+            {
+                localStorage.setItem("myglamm-promo",JSON.stringify([]));
+            }
+            
+            let myglammpromo = JSON.parse(localStorage.getItem("myglamm-promo"));
+            
+            myglammpromo.pop()
+            myglammpromo.push(srng.toFixed(0));
+          
+            localStorage.setItem("myglamm-promo",JSON.stringify (myglammpromo));
+    
+    
+            let p = document.createElement("p");
+            let q01 = document.getElementById("q01");
+            q01.innerHTML = null;
+            p.innerText = "Please Enter Valid Promocode...!"
+            q01.append(p);
+            q01.style.color = "red";
+            q01.style.fontWeight = "bolder";
+            q01.style.paddingLeft = "2%";
+            q01.style.paddingTop = "2%";
+        }
+    }
+    else
+    {
+        if(localStorage.getItem("myglamm-promo")===null)
+            {
+                localStorage.setItem("myglamm-promo",JSON.stringify([]));
+            }
+            
+            let myglammpromo = JSON.parse(localStorage.getItem("myglamm-promo"));
+            
+            myglammpromo.pop()
+            myglammpromo.push(srng.toFixed(0));
+          
+            localStorage.setItem("myglamm-promo",JSON.stringify (myglammpromo));
+    
+    
+            let p = document.createElement("p");
+            let q01 = document.getElementById("q01");
+            q01.innerHTML = null;
+            p.innerText = "Promocode Is Already Applied...!"
+            q01.append(p);
+            q01.style.color = "red";
+            q01.style.fontWeight = "bolder";
+            q01.style.paddingLeft = "2%";
+            q01.style.paddingTop = "2%";
+    }
+   
+}
