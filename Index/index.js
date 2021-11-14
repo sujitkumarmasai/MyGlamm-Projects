@@ -85,8 +85,8 @@ setInterval(() => {
 }, 3000);
 
 
-var s01 = document.getElementById("cart-length");
-s01.style.visibility = "hidden";
+// var s01 = document.getElementById("cart-length");
+// s01.style.visibility = "hidden";
 
 var s02 = document.getElementById("mobile-btn");
 s02.onclick = function()

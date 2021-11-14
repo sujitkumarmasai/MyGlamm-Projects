@@ -5,9 +5,9 @@ This is our Second project at masai school construct week after learning HTML,CS
 ## Contributors
 
 The main Contributors for this project are 
-- Sourav Das
+ - Sourav Das
  - Sujit Kumar
- - Sarang
+ - Sarang Gunjal
  - Shubham Srivastava
  - Biswajit Biswal
 
