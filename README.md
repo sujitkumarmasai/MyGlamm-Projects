@@ -65,3 +65,12 @@ Clicking on Cart will  lead us to the Cart Page.
 - We had to learn about many CSS properties that we didn’t know before.
 - Our skills in Java Script and DOM manipulation became better.
 - We all learned how to plan a project and execute that.
+
+
+![Screenshot (17)](https://user-images.githubusercontent.com/72076630/141668396-44a19b12-0a97-4859-bf97-1610b705de94.png)
+![Screenshot (20)](https://user-images.githubusercontent.com/72076630/141668418-431134c3-c133-475f-baa6-866143565ee8.png)
+![Screenshot (23)](https://user-images.githubusercontent.com/72076630/141668420-1df83a2b-74a5-49a1-98da-d3a81f885f12.png)
+![Screenshot (25)](https://user-images.githubusercontent.com/72076630/141668422-fe85110d-18b3-422a-b087-d15e62b8c8ad.png)
+![Screenshot (27)](https://user-images.githubusercontent.com/72076630/141668423-07ba0d24-a2ef-4fd7-8948-2663c50d4a2e.png)
+![Screenshot (28)](https://user-images.githubusercontent.com/72076630/141668425-c138495c-e010-4026-9106-08ebc10ff0e3.png)
+![Screenshot (18)](https://user-images.githubusercontent.com/72076630/141668427-bb415048-04d4-4948-9be5-eff59b16fd8d.png)
