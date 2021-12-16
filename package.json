@@ -2,7 +2,8 @@
   "name": "my-glamm-clone",
   "version": "1.0.0",
   "description": "This is our Second project at masai school construct week after learning HTML,CSS & JAVASCRIPT",
-  "main": "index.js",
+  "main": "src/index.js",
+  "server": "nodemon src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
