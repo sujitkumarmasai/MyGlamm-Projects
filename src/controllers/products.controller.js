@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const connect = require("../configs/db")
 
-router.post("/", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
 
     

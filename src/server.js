@@ -6,16 +6,20 @@ const app = express();
 
 const path = require("path");
 
+app.use(express.static(path.join(__dirname, 'MY_GLAMM_CLONE')))
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({extended: false})); app.use(express.static(path.join(__dirname, '../')));
 app.use(express.json());
 
 
 
-console.log(path.join(__dirname,"../index.html"));
+//console.log(path.join(__dirname,"../index.html"));
 
 app.get("/", async (req, res) => {
   try 
   {
-    return res.render(path.join(__dirname,"../index.html"));
+    res.sendFile(path.join(__dirname,"../index.html"));
     //return res.send("srng index.html");
   }
   catch (e) {
