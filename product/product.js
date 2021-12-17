@@ -406,7 +406,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
     collection.onclick = function()
     {
-        window.location.href = "products.html";
+        window.location.href = "/products";
     }
 
     var home = document.getElementById("home");
@@ -421,11 +421,11 @@ cathead.innerHTML = "  COLLECTION  ";
 
     home.onclick = function()
     {
-        window.location.href = "index.html";
+        window.location.href = "/";
     }
 
     var user = document.getElementById("user");
     user.onclick = function()
     {
-        window.location.href = "index.html";
+        window.location.href = "/";
     }
