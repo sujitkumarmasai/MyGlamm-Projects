@@ -27,6 +27,8 @@ app.get("/", async (req, res) => {
   }
 });
 
+
+
 const productController = require("./controllers/products.controller");
 app.use("/products", productController);
 
