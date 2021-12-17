@@ -12,9 +12,32 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false})); app.use(express.static(path.join(__dirname, '../')));
 app.use(express.json());
 
+const products = require("./models/products.model");
 
 
-//console.log(path.join(__dirname,"../index.html"));
+// app.get("/srng", async(req,res) => {
+
+//   const data = await products.find().lean().exec();
+//   res.send(data);
+
+// })
+
+// const senddata =  () => {
+  // return let data =  product.find().lean().exec().then(() => {
+  //   export data 
+  // })
+// }
+
+// let data  = products.find()
+
+// console.log(data);
+
+// async function data(){
+//   let data = await products.find().lean().exec()
+//   console.log(data);
+// } 
+// data();
+// //console.log(path.join(__dirname,"../index.html"));
 
 app.get("/", async (req, res) => {
   try 
@@ -47,4 +70,7 @@ const start = async () => {
   });
 };
 
+
+
+//module.exports = data;
 module.exports = start;

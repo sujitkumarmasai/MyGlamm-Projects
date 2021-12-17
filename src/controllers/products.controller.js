@@ -14,7 +14,7 @@ app.use(express.json());
 router.get("/", async (req, res) => {
   try {
       const productsData = await products.find().lean().exec();
-      // res.status(201).send(productsData);
+      //res.status(201).send(productsData);
       res.sendFile(path.join(__dirname,"../../products.html"));
     
   }

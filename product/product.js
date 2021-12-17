@@ -1,12 +1,7 @@
 import data from "../Data/products.data.js";
 import nav from "../productnav/productnav.js";
-
-// const products = require("../../models/products.model");
-// const data = await products.find().lean().exec();
-
-
 var container = document.getElementById("container");
-container.innerHTML = nav() ;
+container.innerHTML = nav();
 
 
 var pdata = document.getElementById("pdata");
