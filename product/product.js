@@ -1,6 +1,9 @@
 import data from "../Data/products.data.js";
-
 import nav from "../productnav/productnav.js";
+
+// const products = require("../../models/products.model");
+// const data = await products.find().lean().exec();
+
 
 var container = document.getElementById("container");
 container.innerHTML = nav() ;
@@ -64,7 +67,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
                     localStorage.setItem("pdetails",JSON.stringify (pdetails));
                     
-                    window.location.href = "productdetails.html";
+                    window.location.href = "/productdetails";
 
                 }
 
@@ -142,7 +145,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
                             localStorage.setItem("pdetails",JSON.stringify (pdetails));
                             
-                            window.location.href = "productdetails.html";
+                            window.location.href = "/productdetails";
 
                         }
 
@@ -222,7 +225,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
                             localStorage.setItem("pdetails",JSON.stringify (pdetails));
                             
-                            window.location.href = "productdetails.html";
+                            window.location.href = "/productdetails";
 
                         }
 
@@ -301,7 +304,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
                             localStorage.setItem("pdetails",JSON.stringify (pdetails));
                             
-                            window.location.href = "productdetails.html";
+                            window.location.href = "/productdetails";
 
                         }
 
@@ -381,7 +384,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
                             localStorage.setItem("pdetails",JSON.stringify (pdetails));
                             
-                            window.location.href = "productdetails.html";
+                            window.location.href = "/productdetails";
 
                         }
 
