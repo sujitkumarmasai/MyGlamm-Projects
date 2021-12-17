@@ -3,20 +3,19 @@ const router = express.Router();
 const products = require("../models/products.model");
 const path = require("path");
 const app = express();
+
+
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({extended: false})); app.use(express.static(path.join(__dirname, '.../')));
+app.use(bodyParser.urlencoded({extended: false})); app.use(express.static(path.join(__dirname, '../')));
 app.use(express.json());
-
-
-
 
 
 router.get("/", async (req, res) => {
   try {
-      const productsData = await products.find({category:"makeup"}).lean().exec();
+      const productsData = await products.find().lean().exec();
       // res.status(201).send(productsData);
-      res.sendFile(path.join(__dirname,"../products.html"));
+      res.sendFile(path.join(__dirname,"../../products.html"));
     
   }
   catch (e) {

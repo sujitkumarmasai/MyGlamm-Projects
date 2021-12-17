@@ -1,4 +1,5 @@
 import data from "../Data/products.data.js";
+
 import nav from "../productnav/productnav.js";
 
 var container = document.getElementById("container");
