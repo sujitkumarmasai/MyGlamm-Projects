@@ -11,10 +11,10 @@ paymentbtm.onclick = function () {
     validity.value != null &&
     validity.value != ""
   )
-    window.location.href = "../success_page/success.html";
+    window.location.href = "/success";
 };
 
-let total01 = JSON.parse(localStorage.getItem("myglamm-promo"));
+let total01 = JSON.parse(localStorage.getItem("p_amount"));
 let stotal = total01[0];
 console.log(stotal);
 

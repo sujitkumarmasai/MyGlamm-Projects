@@ -113,7 +113,7 @@ pbagbutton.onclick = function()
 
     localStorage.setItem("myglammCart",JSON.stringify (myglammCart));
                     
-    window.location.href = "./Cart/cart.html";
+    window.location.href = "/cart";
     //alert("Product added to cart");
 
 }

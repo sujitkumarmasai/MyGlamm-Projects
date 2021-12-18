@@ -252,9 +252,6 @@ checkoutbtn.onclick = function()
 
   localStorage.setItem("myglamm-total",JSON.stringify (myglammtotal));
   
-    window.location.href = "../Checkout/checkout.html"
+    window.location.href = "/checkout"
 }
-
-
-
 

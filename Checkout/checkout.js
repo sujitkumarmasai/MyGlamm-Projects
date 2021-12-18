@@ -33,6 +33,20 @@ payamount.style.textAlign = "right";
 payamount.innerHTML = "₹ "+srng;
 
 
+// if(localStorage.getItem("p_amount")===null)
+// {
+//     localStorage.setItem("p_amount",JSON.stringify([]));
+// }
+
+// let pay_amount = JSON.parse(localStorage.getItem("p_amount"));
+
+// pay_amount.pop()
+// pay_amount.push(srng.toFixed(0));
+
+// localStorage.setItem("p_amount",JSON.stringify (pay_amount));
+
+
+
 var yousaved = document.getElementById("yousaved");
 
 yousaved.innerHTML = null;
@@ -41,16 +55,28 @@ yousaved.style.textAlign = "right";
 yousaved.innerHTML = "₹ "+30;
 
 
-
 var non = document.getElementById("non");
 non.style.textAlign = "right";
 
 
 
 var proceed_payment = document.getElementById("proceed_payment");
+
 proceed_payment.onclick = function()
 {
-    window.location.href = "../payment/payment.html";
+    if(localStorage.getItem("p_amount")===null)
+    {
+        localStorage.setItem("p_amount",JSON.stringify([]));
+    }
+    
+    let pay_amount = JSON.parse(localStorage.getItem("p_amount"));
+    
+    pay_amount.pop()
+    pay_amount.push(srng.toFixed(0));
+
+    localStorage.setItem("p_amount",JSON.stringify (pay_amount));
+
+    window.location.href = "/payment";
 }
 
 
@@ -115,34 +141,11 @@ function promo()
     
             payamount.innerHTML = "₹ "+srng.toFixed(0);
     
-    
-            if(localStorage.getItem("myglamm-promo")===null)
-            {
-                localStorage.setItem("myglamm-promo",JSON.stringify([]));
-            }
-            
-            let myglammpromo = JSON.parse(localStorage.getItem("myglamm-promo"));
-            
-            myglammpromo.pop()
-            myglammpromo.push(srng.toFixed(0));
-          
-            localStorage.setItem("myglamm-promo",JSON.stringify (myglammpromo));
-        } 
+       } 
         
         else 
         {
     
-            if(localStorage.getItem("myglamm-promo")===null)
-            {
-                localStorage.setItem("myglamm-promo",JSON.stringify([]));
-            }
-            
-            let myglammpromo = JSON.parse(localStorage.getItem("myglamm-promo"));
-            
-            myglammpromo.pop()
-            myglammpromo.push(srng.toFixed(0));
-          
-            localStorage.setItem("myglamm-promo",JSON.stringify (myglammpromo));
     
     
             let p = document.createElement("p");
@@ -158,17 +161,9 @@ function promo()
     }
     else
     {
-        if(localStorage.getItem("myglamm-promo")===null)
-            {
-                localStorage.setItem("myglamm-promo",JSON.stringify([]));
-            }
-            
-            let myglammpromo = JSON.parse(localStorage.getItem("myglamm-promo"));
-            
-            myglammpromo.pop()
-            myglammpromo.push(srng.toFixed(0));
-          
-            localStorage.setItem("myglamm-promo",JSON.stringify (myglammpromo));
+        
+        
+
     
     
             let p = document.createElement("p");
@@ -183,3 +178,4 @@ function promo()
     }
    
 }
+

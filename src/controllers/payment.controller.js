@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 router.get("/", async (req, res) => {
-  try {ac
+  try {
       
       res.sendFile(path.join(__dirname,"../../payment/payment.html"));
     
