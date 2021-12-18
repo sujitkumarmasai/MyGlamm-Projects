@@ -62,7 +62,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
                     localStorage.setItem("pdetails",JSON.stringify (pdetails));
                     
-                    window.location.href = "/productdetails";
+                    window.location.href = "/productsdetail";
 
                 }
 
@@ -140,7 +140,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
                             localStorage.setItem("pdetails",JSON.stringify (pdetails));
                             
-                            window.location.href = "/productdetails";
+                            window.location.href = "/productsdetailv";
 
                         }
 
@@ -220,7 +220,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
                             localStorage.setItem("pdetails",JSON.stringify (pdetails));
                             
-                            window.location.href = "/productdetails";
+                            window.location.href = "/productsdetail";
 
                         }
 
@@ -299,7 +299,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
                             localStorage.setItem("pdetails",JSON.stringify (pdetails));
                             
-                            window.location.href = "/productdetails";
+                            window.location.href = "/productsdetail";
 
                         }
 
@@ -379,7 +379,7 @@ cathead.innerHTML = "  COLLECTION  ";
 
                             localStorage.setItem("pdetails",JSON.stringify (pdetails));
                             
-                            window.location.href = "/productdetails";
+                            window.location.href = "/productsdetail";
 
                         }
 

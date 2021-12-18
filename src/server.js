@@ -15,29 +15,6 @@ app.use(express.json());
 const products = require("./models/products.model");
 
 
-// app.get("/srng", async(req,res) => {
-
-//   const data = await products.find().lean().exec();
-//   res.send(data);
-
-// })
-
-// const senddata =  () => {
-  // return let data =  product.find().lean().exec().then(() => {
-  //   export data 
-  // })
-// }
-
-// let data  = products.find()
-
-// console.log(data);
-
-// async function data(){
-//   let data = await products.find().lean().exec()
-//   console.log(data);
-// } 
-// data();
-// //console.log(path.join(__dirname,"../index.html"));
 
 app.get("/", async (req, res) => {
   try 
@@ -53,9 +30,12 @@ app.get("/", async (req, res) => {
 
 
 const productController = require("./controllers/products.controller");
+const productContrl = require("./controllers/productdetail.control");
+
+
 app.use("/products", productController);
-const productdetailsController = require("./controllers/productdetails.controller");
-app.use("/productdetails", productdetailsController);
+app.use("/productsdetail", productContrl);
+
 
 
 
