@@ -11,7 +11,7 @@ paymentbtm.onclick = function () {
     validity.value != null &&
     validity.value != ""
   )
-    window.location.href = "/success";
+    window.location.href = "/successful";
 };
 
 let total01 = JSON.parse(localStorage.getItem("p_amount"));

@@ -1,8 +1,22 @@
-import data from "../Data/products.data.js";
+//import data from "../Data/products.data.js";
 import nav from "../productnav/productnav.js";
 var container = document.getElementById("container");
 container.innerHTML = nav();
 
+var data;
+
+fetch("http://localhost:80/srng").then(function(res)
+{
+      return res.json(); 
+}).then(function(res)
+{
+      data = res;
+      console.log(data);
+      myglamm(data);
+}) 
+
+function myglamm(data)
+{
 
 var pdata = document.getElementById("pdata");
 var cathead = document.getElementById("cathead");
@@ -424,3 +438,4 @@ cathead.innerHTML = "  COLLECTION  ";
     {
         window.location.href = "/";
     }
+}

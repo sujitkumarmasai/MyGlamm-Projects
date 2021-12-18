@@ -1,7 +1,7 @@
 const express = require("express");
 const { render } = require("express/lib/response");
 const connect = require("./configs/db");
-const port = 7000;
+const port = 80;
 const app = express();
 
 const path = require("path");
@@ -28,6 +28,17 @@ app.get("/", async (req, res) => {
 });
 
 
+app.get("/srng", async (req, res) => {
+  try {
+      const productsData = await products.find().lean().exec();
+      res.status(201).send(productsData);
+      //res.sendFile(path.join(__dirname,"../../products.html")); 
+  }
+  catch (e) {
+    return res.status(500).json({ message: e.message, status: "Failed" });
+  }
+});
+
 
 const productController = require("./controllers/products.controller");
 const productContrl = require("./controllers/productdetail.control");
@@ -43,7 +54,7 @@ app.use("/productsdetail", productContrl);
 app.use("/cart", cartcontroller);
 app.use("/payment", paymentcontroller);
 app.use("/checkout", checkoutcontroller);
-app.use("/success", successcontroller);
+app.use("/successful", successcontroller);
 
 
 
