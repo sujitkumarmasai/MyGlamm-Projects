@@ -31,10 +31,19 @@ app.get("/", async (req, res) => {
 
 const productController = require("./controllers/products.controller");
 const productContrl = require("./controllers/productdetail.control");
+const cartcontroller = require("./controllers/cart.controller");
+const checkoutcontroller = require("./controllers/checkout.controller");
+const paymentcontroller = require("./controllers/payment.controller");
+const successcontroller = require("./controllers/success.controller");
+
 
 
 app.use("/products", productController);
 app.use("/productsdetail", productContrl);
+app.use("/cart", cartcontroller);
+app.use("/payment", paymentcontroller);
+app.use("/checkout", checkoutcontroller);
+app.use("/success", successcontroller);
 
 
 
