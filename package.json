@@ -6,12 +6,13 @@
   "server": "nodemon src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon src/index.js"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sourav12061999/my-glamm-clone.git"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
