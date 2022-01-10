@@ -1,5 +1,7 @@
 # My-Glamm clone
 
+My project demo link: https://myglammm.netlify.app/
+
 This is our Second project at masai school construct week after learning HTML,CSS & JAVASCRIPT
 
 ## Contributors
